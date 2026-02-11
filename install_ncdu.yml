@@ -1,0 +1,11 @@
+---
+- name: Install ncdu package on Ubuntu
+  hosts: all
+  become: true  # This allows the task to run with sudo privileges
+  tasks:
+    - name: Update apt cache and install ncdu
+      ansible.builtin.apt:
+        name: ncdu
+        state: present
+        update_cache: true
+
