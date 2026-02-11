@@ -1,6 +1,6 @@
 ---
 
-- hosts: 10.10.50.118
+- hosts: all
   become: true
   tasks:
     - name: Install apache2 package
